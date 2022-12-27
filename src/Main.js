@@ -159,7 +159,7 @@ function Main() {
                 <a className='content-header-logo' onClick={scrollToTop} >JS</a>
                 <div className='content-header-links'>
                     {
-                        links.map((link) => <a className='links' onClick={() => scrollToSection(link.link)}>{link.name}</a>)
+                        links.map((link, ind) => <a className='links' onClick={() => scrollToSection(link.link)} key={ind}>{link.name}</a>)
                     }
                 </div>
             </div>
@@ -226,15 +226,15 @@ function Main() {
                     <a className='content-main-connect' href="https://docs.google.com/document/d/15Gjwp768dQm5dqFT75kamAlyVy6TslMtS0q_EmjLL0w/edit?usp=sharing" target="_blank">
                         Resume
                     </a>
-                    <a className='content-main-arrow-container'>
+                    <div className='content-main-arrow-container'>
                         <a className='content-main-arrow' onClick={() => scrollToSection('about')}>
                             <DownArrow />
                         </a>
-                    </a>
+                    </div>
                 </main>
             </div>
 
-            <body className='body'>
+            <div className='body'>
 
                 <div className='about' id="about">
                     <div className='about-header hidden'>
@@ -515,14 +515,14 @@ function Main() {
                                 <GithubIcon />
                             </a>
                         </div>
-                        <a className='contact-main-arrow-container hidden'>
+                        <div className='contact-main-arrow-container hidden'>
                             <a className='contact-main-arrow' onClick={scrollToTop}>
                                 <UpArrow />
                             </a>
-                        </a>
+                        </div>
                     </div>
                 </div>
-            </body>
+            </div>
             <footer className='footer hidden'>
                 <div className='footer-text'>
                     Designed and built by Jacob Seol
