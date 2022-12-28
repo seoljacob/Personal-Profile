@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/personal_profile/static/css/main.dfd5bc55.css",
+    "main.js": "/personal_profile/static/js/main.037f277b.js",
+    "static/media/right-arrow-outline-svgrepo-com (1).svg": "/personal_profile/static/media/right-arrow-outline-svgrepo-com (1).469d030c20f8c69fee34.svg",
+    "index.html": "/personal_profile/index.html",
+    "main.dfd5bc55.css.map": "/personal_profile/static/css/main.dfd5bc55.css.map",
+    "main.037f277b.js.map": "/personal_profile/static/js/main.037f277b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dfd5bc55.css",
+    "static/js/main.037f277b.js"
+  ]
+}
