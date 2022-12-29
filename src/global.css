@@ -133,6 +133,14 @@ li {
 }
 
 .content-main-subtitle {
+  display: none;
+  margin: 4% 0 0 0;
+  font-size: 2em;
+  animation: fadeInWithBlur 0.5s ease-in-out 6.5s backwards;
+}
+
+.content-main-subtitle-mobile {
+  display: block;
   margin: 4% 0 0 0;
   font-size: 2em;
   animation: fadeInWithBlur 0.5s ease-in-out 6.5s backwards;
@@ -648,8 +656,13 @@ li {
   }
 
   .content-main-subtitle {
+    display: block;
     margin: 0 0 0 0;
     font-size: 3em;
+  }
+
+  .content-main-subtitle-mobile {
+    display: none;
   }
 
   .content-main-description {

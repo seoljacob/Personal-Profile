@@ -219,6 +219,9 @@ function Main() {
                             <div className='content-main-letter'>.</div>
                         </span>
                     </div>
+                    <div className='content-main-subtitle-mobile'>
+                        I build things with code.
+                    </div>
                     <div className='content-main-description'>
                         I'm a computer science student graduating in May 2023.
                         Currently, I'm seeking new grad or intern opportunities for summer 2023.
