@@ -140,7 +140,6 @@ li {
 }
 
 .content-main-subtitle-mobile {
-  display: block;
   margin: 4% 0 0 0;
   font-size: 2em;
   animation: fadeInWithBlur 0.5s ease-in-out 6.5s backwards;
@@ -655,14 +654,9 @@ li {
     font-size: 4em;
   }
 
-  .content-main-subtitle {
-    display: block;
+  .content-main-subtitle-mobile {
     margin: 0 0 0 0;
     font-size: 3em;
-  }
-
-  .content-main-subtitle-mobile {
-    display: none;
   }
 
   .content-main-description {
