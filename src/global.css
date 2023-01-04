@@ -54,13 +54,7 @@ li {
   width: 100%;
   max-width: 1440px;
   min-width: 320px;
-  background-image: url("../public/self-portrait.jpeg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  border-bottom: 20px solid;
-  border-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.5), transparent) 1;
-  transition: background-image 1s;
+  transition: all 1s ease-in-out;
 }
 
 

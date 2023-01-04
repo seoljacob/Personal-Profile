@@ -13,8 +13,6 @@ import PythonIcon from './python-icon';
 import ReactIcon from './react-icon';
 import LinkedInIcon from './linkedin-icon';
 import GithubIcon from './github-icon';
-import DownArrow from './down-arrow';
-import UpArrow from './up-arrow';
 
 // https://www.svgrepo.com/svg/90087/rocket-ship for rocket ship
 // https://devicon.dev/ for all programming icons
@@ -50,11 +48,22 @@ function useScrollDirection() {
 };
 
 function Main() {
-    const objRef = useRef(null);
-    const [position, setPosition] = useState({ x: 10, y: 10 });
-    const [direction, setDirection] = useState('right');
+    const [style, setStyle] = useState({});
     const [activeButton, setActiveButton] = useState('button1');
     const scrollDirection = useScrollDirection();
+
+    useEffect(() => {
+        setTimeout(() => {
+            setStyle({
+                backgroundImage: "url('/self-portrait.jpeg')",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+                borderBottom: "20px solid",
+                borderImage: "linear-gradient(to right, transparent, rgba(0, 0, 0, 0.5), transparent) 1",
+            })
+        }, 2000);
+    }, [])
 
     const handleClick = (button) => {
         setActiveButton(button);
@@ -95,68 +104,10 @@ function Main() {
         window.location.href = mailtoLink;
     };
 
-    useEffect(() => {
-        function handleKeyDown(event) {
-            const obj = objRef.current;
-            if (!obj) return;
-
-            const element = document.querySelector('.container');
-            const rect = obj.getBoundingClientRect();
-            const viewportWidth = window.innerWidth;
-            const viewportHeight = window.innerHeight;
-
-            switch (event.key) {
-                case 'ArrowUp':
-                    setDirection('up');
-                    setPosition(prevPosition => ({
-                        x: prevPosition.x,
-                        y: rect.top <= 0 ? 0 : prevPosition.y - 50,
-                    }));
-                    break;
-                case 'ArrowDown':
-                    setDirection('down');
-                    setPosition(prevPosition => ({
-                        x: prevPosition.x,
-                        y: rect.bottom >= viewportHeight - 50 ? viewportHeight - 50 : prevPosition.y + 50,
-                        y: prevPosition.y + 50,
-                    }));
-                    break;
-                case 'ArrowLeft':
-                    setDirection('left');
-                    setPosition(prevPosition => ({
-                        x: rect.left <= 0 ? 0 : prevPosition.x - 50,
-                        y: prevPosition.y,
-                    }));
-                    break;
-                case 'ArrowRight':
-                    setDirection('right');
-                    setPosition(prevPosition => ({
-                        x: rect.right >= viewportWidth - 50 ? viewportWidth - 50 : prevPosition.x + 50,
-                        y: prevPosition.y,
-                    }));
-                    break;
-            }
-        }
-
-        document.addEventListener('keydown', handleKeyDown);
-
-        return () => {
-            document.removeEventListener('keydown', handleKeyDown);
-        };
-    }, []);
-
+    
     return (
         <>
-            {/* <div className="main" style={{ position: 'absolute', left: position.x, top: position.y }} ref={objRef} >
-                {
-                    direction === 'right' ? <img style={{ height: '48px', width: '48px' }} src="rocket-right.png" /> :
-                        direction === 'left' ? <img style={{ height: '48px', width: '48px' }} src="rocket-left.png" /> :
-                            direction === 'up' ? <img style={{ height: '48px', width: '48px' }} src="rocket-up.png" /> :
-                                direction === 'down' && <img style={{ height: '48px', width: '48px' }} src="rocket-down.png" />
-                }
-            </div> */}
-
-            <div className='content'>
+            <div className='content' style={style}>
                 <div className={`${scrollDirection === "down" ? "hide" : "show1"} content-header`}>
                     <a className='content-header-logo' onClick={scrollToTop} >JS</a>
                     <div className='content-header-links'>
