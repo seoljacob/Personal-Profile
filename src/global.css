@@ -12,6 +12,8 @@
   --font-heading: 'Source Code Pro', monospace;
   --font-size: 1.125rem;
   --line-height: 1.5;
+  --surface-color: #fff;
+  --curve: 40;
 }
 
 .content-header-menu {
@@ -503,6 +505,10 @@ li {
   line-height: 125%;
 }
 
+.about-description {
+  height: 100%;
+}
+
 .tech-stack {
   display: flex;
   flex-wrap: wrap;
@@ -517,6 +523,120 @@ li {
 
 .image-cover:hover {
   opacity: 1;
+}
+
+.about-square {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  min-width: 32%;
+  margin: 2em 0 2em 0;
+  /* horizontal offset / vertical offset / blur radius / spread radius / color */
+  /* box-shadow: 5px 5px 0px 0px #383838; */
+  border-radius: 8px;
+  /* padding: 2em 2em 0 2em; */
+  transition: all 0.2s;
+}
+
+.card {
+  position: relative;
+  display: block;
+  height: 100%;  
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.card__image {      
+  width: 100%;
+  height: 100%;
+}
+
+.card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;      
+  border-radius: 8px;    
+  /* background-color: transparent;       */
+  transform: translateY(100%);
+  transition: .2s ease-in-out;
+}
+
+.card:hover .card__overlay {
+  transform: translateY(0);
+}
+
+.card__header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  padding: 2em;
+  border-radius: 8px;    
+  /* background-color: transparent; */
+  transform: translateY(-100%);
+  transition: .2s ease-in-out;
+}
+
+.card__arc {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 100%;
+  right: 0;      
+  z-index: 1;
+}    
+
+.card:hover .card__header {
+  transform: translateY(0);
+}
+
+.card__thumb {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;      
+  border-radius: 50%;      
+}
+
+.card__title {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 1em;
+  margin: 0 0 .3em;
+  /* color: #6A515E; */
+}
+
+.card__tagline {
+  display: block;
+  font-family: 'Source Code Pro', monospace;
+  font-size: .8em; 
+  /* color: #D7BDCA;   */
+}
+
+.card__status {
+  font-family: 'Source Code Pro', monospace;
+  font-size: .8em;
+  /* color: #D7BDCA; */
+}
+
+.card__description {
+  padding: 0 2em 2em;
+  margin: 0;
+  /* color: #D7BDCA; */
+  font-family: 'Source Code Pro', monospace;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}   
+
+.portrait {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
 .experience {
@@ -969,6 +1089,10 @@ li {
   .about-main {
     display: flex;
     gap: 2.5%;
+  }
+
+  .about-square {
+    margin: 0 0 2em 0;
   }
 
   .experience-main {

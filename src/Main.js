@@ -106,7 +106,7 @@ function Main() {
                         }
                     </div>
                     <div className='content-header-menu'>
-                        <input id="page-nav-toggle" class="main-navigation-toggle" type="checkbox" ref={checkboxRef}/>
+                        <input id="page-nav-toggle" class="main-navigation-toggle" type="checkbox" ref={checkboxRef} />
                         <label for="page-nav-toggle">
                             <svg class="icon--menu-toggle" viewBox="0 0 60 30">
                                 <g class="icon-group">
@@ -373,7 +373,7 @@ function Main() {
                     </div>
 
                     <div className='about-main hidden'>
-                        <div>
+                        <div className='about-description'>
                             <p>
                                 Since a young age, I found myself drawn to the world of technology and its endless possibilities.
                                 I now design and develop exceptional digital experiences that have real and tangible effects on our world.
@@ -416,7 +416,24 @@ function Main() {
                                 </div>
                             </div>
                         </div>
-                        {/* <img className='portrait' src='./self-portrait.jpeg' /> */}
+                        <div className='about-square'>
+                            <a class="card">
+                                <img className='portrait card__image' src='/self-portrait.jpeg' />
+                                <div className="card__overlay">
+                                    <div className="card__header">
+                                        <svg className="card__arc" xmlns="http://www.w3.org/2000/svg">
+                                            <path />
+                                        </svg>
+                                        <img className="card__thumb" src="/self-portrait3.jpeg" alt="" />
+                                        <div className="card__header-text">
+                                            <h3 className="card__title">Jacob Seol</h3>
+                                            <span className="card__status">Vancouver, BC</span>
+                                        </div>
+                                    </div>
+                                    <p className="card__description">Photo Taken at Ambleside Park</p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
