@@ -416,7 +416,7 @@ function Main() {
                                 </div>
                             </div>
                         </div>
-                        <div className='about-square'>
+                        <div className='about-square hidden'>
                             <a class="card">
                                 <img className='portrait card__image' src='/self-portrait.jpeg' />
                                 <div className="card__overlay">
