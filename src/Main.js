@@ -242,7 +242,6 @@ function Main() {
             </div>
 
             <div className='body'>
-
                 <div className='work' id="work">
 
                     <div className='work-header hidden'>
