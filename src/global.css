@@ -60,6 +60,7 @@ li {
   background-size: cover;
   border-bottom: 20px solid;
   border-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.5), transparent) 1;
+  transition: background-image 1s;
 }
 
 
