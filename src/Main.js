@@ -20,9 +20,9 @@ import UpArrow from './up-arrow';
 // https://devicon.dev/ for all programming icons
 
 const links = [
+    { name: 'Work', link: 'work' },
     { name: 'About', link: 'about' },
     { name: 'Experience', link: 'experience' },
-    { name: 'Work', link: 'work' },
     { name: 'Contact', link: 'contact' },
 ]
 
@@ -155,19 +155,20 @@ function Main() {
                                 direction === 'down' && <img style={{ height: '48px', width: '48px' }} src="rocket-down.png" />
                 }
             </div> */}
-            <div className={`${scrollDirection === "down" ? "hide" : "show1"} content-header`}>
-                <a className='content-header-logo' onClick={scrollToTop} >JS</a>
-                <div className='content-header-links'>
-                    {
-                        links.map((link, ind) => <a className='links' onClick={() => scrollToSection(link.link)} key={ind}>{link.name}</a>)
-                    }
-                </div>
-            </div>
+
             <div className='content'>
+                <div className={`${scrollDirection === "down" ? "hide" : "show1"} content-header`}>
+                    <a className='content-header-logo' onClick={scrollToTop} >JS</a>
+                    <div className='content-header-links'>
+                        {
+                            links.map((link, ind) => <a className='links' onClick={() => scrollToSection(link.link)} key={ind}>{link.name}</a>)
+                        }
+                    </div>
+                </div>
                 <main className='content-main'>
                     <TypeAnimation
                         className='content-main-intro'
-                        sequence={[2500, 'Hi, my name is']} />
+                        sequence={[1000, 'Hi, my name is']} />
                     <div className='content-main-title'>
                         <span>
                             <div className='content-main-letter'>J</div>
@@ -182,6 +183,7 @@ function Main() {
                             <div className='content-main-letter'>e</div>
                             <div className='content-main-letter'>o</div>
                             <div className='content-main-letter'>l</div>
+                            <div className='content-main-letter'>.</div>
                         </span>
                     </div>
                     <div className='content-main-subtitle'>
@@ -220,122 +222,31 @@ function Main() {
                         </span>
                     </div>
                     <div className='content-main-subtitle-mobile'>
-                        I build things with code.
+                        I am a Software Engineer based in Vancouver, BC.
                     </div>
-                    <div className='content-main-description'>
+                    {/* <div className='content-main-description'>
                         I'm a computer science student graduating in May 2023.
                         Currently, I'm seeking new grad or intern opportunities for summer 2023.
-                    </div>
+                    </div> */}
                     <a className='content-main-connect' href="https://docs.google.com/document/d/15Gjwp768dQm5dqFT75kamAlyVy6TslMtS0q_EmjLL0w/edit?usp=sharing" target="_blank">
                         Resume
                     </a>
-                    <div className='content-main-arrow-container'>
+                    {/* <div className='content-main-arrow-container'>
                         <a className='content-main-arrow' onClick={() => scrollToSection('about')}>
                             <DownArrow />
                         </a>
-                    </div>
+                    </div> */}
+                    {/* https://codemyui.com/dripping-down-arrow/ */}
+                    <a class="content-main-arrow-container" onClick={() => scrollToSection('work')}>
+                        <div class="chevron"></div>
+                        <div class="chevron"></div>
+                        <div class="chevron"></div>
+                        <span class="text">Scroll down</span>
+                    </a>
                 </main>
             </div>
 
             <div className='body'>
-
-                <div className='about' id="about">
-                    <div className='about-header hidden'>
-                        <div>About Me</div>
-                        <div className='border-right'></div>
-                    </div>
-
-                    <div className='about-main hidden'>
-                        <div>
-                            <p>
-                                Since a young age, I found myself drawn to the world of technology and its endless possibilities.
-                                I now design and develop exceptional digital experiences that have real and tangible effects on our world.
-                                I've had the privilege of working at a start-up and
-                                I'm excited to continue to learn, grow, and leverage my diverse background to make meaningful contributions at my next org.
-                            </p>
-                            <p>
-                                Here are some of the technologies I've been working with:
-                            </p>
-                            <div className='tech-stack hidden'>
-                                <div className='image-cover'>
-                                    <JavaIcon />
-                                </div>
-                                <div className='image-cover'>
-                                    <JavaScriptIcon />
-                                </div>
-                                <div className='image-cover'>
-                                    <PythonIcon />
-                                </div>
-                                <div className='image-cover'>
-                                    <CIcon />
-                                </div>
-                                <div className='image-cover'>
-                                    <ReactIcon />
-                                </div>
-                                <div className='image-cover'>
-                                    <NextIcon />
-                                </div>
-                                <div className='image-cover'>
-                                    <NodeIcon />
-                                </div>
-                                <div className='image-cover'>
-                                    <FlaskIcon />
-                                </div>
-                                <div className='image-cover'>
-                                    <MySQLIcon />
-                                </div>
-                                <div className='image-cover'>
-                                    <FirebaseIcon />
-                                </div>
-                            </div>
-                        </div>
-                        {/* <img className='portrait' src='./self-portrait.jpeg' /> */}
-                    </div>
-                </div>
-
-                <div className='experience' id="experience">
-                    <div className='experience-header hidden'>
-                        <div >My Experience</div>
-                        <div className='border-right'></div>
-                    </div>
-                    <div className='experience-main hidden'>
-                        <div className='experience-buttons'>
-                            <button onClick={() => handleClick('button1')} className={`${activeButton === 'button1' ? 'experience-button-active' : ''} experience-button`}>Innovibe</button>
-                            <button onClick={() => handleClick('button2')} className={`${activeButton === 'button2' ? 'experience-button-active' : ''} experience-button`}>Coming Soon</button>
-                        </div>
-                        <div className='experience-descriptions'>
-                            {
-                                activeButton === 'button1' && (
-                                    <div className='experience-description'>
-                                        <div className='experience-description-title'>Innovibe</div>
-                                        <div className='experience-description-role'>Software Developer Co-op</div>
-                                        <div className='experience-description-date'>January 2022 - August 2022 | 8 months</div>
-                                        <ul>
-                                            <li>Built and maintained web applications using React.js and TypeScript</li>
-                                            <li>Improved team productivity and collaboration by implementing Agile development methodologies, including daily stand-ups, sprint planning, and retrospectives
-                                            </li>
-                                            <li>Utilised RESTful APIs and SQL to build and maintain efficient, robust, and scalable data-driven systems
-                                            </li>
-                                            <li>Deployed server-side rendered web applications using Next.js, resulting in improved performance and SEO
-                                            </li>
-                                            <li>Contributed to the development of enterprise-level applications, demonstrating strong problem-solving and team collaboration skills
-                                            </li>
-                                        </ul>
-                                    </div>
-                                )
-                            }
-                            {
-                                activeButton === 'button2' && (
-                                    <div className='experience-description'>
-                                        <div className='experience-description-title'>Looking for my next opportunity</div>
-                                        <div className='experience-description-role'>New grad | Internship</div>
-                                        <div className='experience-description-date'>Summer 2023</div>
-                                    </div>
-                                )
-                            }
-                        </div>
-                    </div>
-                </div>
 
                 <div className='work' id="work">
 
@@ -398,7 +309,7 @@ function Main() {
                                 <PixelCode />
                             </div>
                             <div className='work-square-title'>
-                                PlanA
+                                Plan A
                             </div>
                             <div className='work-square-description'>
                                 An android application designed to plan your next road trip. Built with EV vehicle distance control, charging station locations, routing, searching, and more
@@ -497,9 +408,109 @@ function Main() {
                     </div>
                 </div>
 
+                <div className='about' id="about">
+                    <div className='about-header hidden'>
+                        <div>About Me</div>
+                        <div className='border-right'></div>
+                    </div>
+
+                    <div className='about-main hidden'>
+                        <div>
+                            <p>
+                                Since a young age, I found myself drawn to the world of technology and its endless possibilities.
+                                I now design and develop exceptional digital experiences that have real and tangible effects on our world.
+                                I've had the privilege of working at a start-up and
+                                I'm excited to continue to learn, grow, and leverage my diverse background to make meaningful contributions at my next org.
+                            </p>
+                            <p>
+                                Here are some of the technologies I've been working with:
+                            </p>
+                            <div className='tech-stack hidden'>
+                                <div className='image-cover'>
+                                    <JavaIcon />
+                                </div>
+                                <div className='image-cover'>
+                                    <JavaScriptIcon />
+                                </div>
+                                <div className='image-cover'>
+                                    <PythonIcon />
+                                </div>
+                                <div className='image-cover'>
+                                    <CIcon />
+                                </div>
+                                <div className='image-cover'>
+                                    <ReactIcon />
+                                </div>
+                                <div className='image-cover'>
+                                    <NextIcon />
+                                </div>
+                                <div className='image-cover'>
+                                    <NodeIcon />
+                                </div>
+                                <div className='image-cover'>
+                                    <FlaskIcon />
+                                </div>
+                                <div className='image-cover'>
+                                    <MySQLIcon />
+                                </div>
+                                <div className='image-cover'>
+                                    <FirebaseIcon />
+                                </div>
+                            </div>
+                        </div>
+                        {/* <img className='portrait' src='./self-portrait.jpeg' /> */}
+                    </div>
+                </div>
+
+                <div className='experience' id="experience">
+                    <div className='experience-header hidden'>
+                        <div >My Experience</div>
+                        <div className='border-right'></div>
+                    </div>
+                    <div className='experience-main hidden'>
+                        <div className='experience-buttons'>
+                            <button onClick={() => handleClick('button1')} className={`${activeButton === 'button1' ? 'experience-button-active' : ''} experience-button`}>Innovibe</button>
+                            <button onClick={() => handleClick('button2')} className={`${activeButton === 'button2' ? 'experience-button-active' : ''} experience-button`}>Coming Soon</button>
+                        </div>
+                        <div className='experience-descriptions'>
+                            {
+                                activeButton === 'button1' && (
+                                    <div className='experience-description'>
+                                        <div className='experience-description-title'>Innovibe</div>
+                                        <div className='experience-description-role'>Software Developer Co-op</div>
+                                        <div className='experience-description-date'>January 2022 - August 2022 | 8 months</div>
+                                        <ul>
+                                            <li>Built and maintained web applications using React.js and TypeScript</li>
+                                            <li>Improved team productivity and collaboration by implementing Agile development methodologies, including daily stand-ups, sprint planning, and retrospectives
+                                            </li>
+                                            <li>Utilised RESTful APIs and SQL to build and maintain efficient, robust, and scalable data-driven systems
+                                            </li>
+                                            <li>Deployed server-side rendered web applications using Next.js, resulting in improved performance and SEO
+                                            </li>
+                                            <li>Contributed to the development of enterprise-level applications, demonstrating strong problem-solving and team collaboration skills
+                                            </li>
+                                        </ul>
+                                    </div>
+                                )
+                            }
+                            {
+                                activeButton === 'button2' && (
+                                    <div className='experience-description'>
+                                        <div className='experience-description-title'>Next Opportunity</div>
+                                        <div className='experience-description-role'>New Grad | Internship</div>
+                                        <div className='experience-description-date'>Summer 2023</div>
+                                    </div>
+                                )
+                            }
+                        </div>
+                    </div>
+                </div>
+
                 <div className='contact' id="contact">
                     <div className='contact-header hidden'>
+                        <div className='border-left'></div>
                         <div className='text-center'>Get In Touch</div>
+                        <div className='border-right'></div>
                     </div>
 
                     <div className='contact-main'>
@@ -518,11 +529,11 @@ function Main() {
                                 <GithubIcon />
                             </a>
                         </div>
-                        <div className='contact-main-arrow-container hidden'>
+                        {/* <div className='contact-main-arrow-container hidden'>
                             <a className='contact-main-arrow' onClick={scrollToTop}>
                                 <UpArrow />
                             </a>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
