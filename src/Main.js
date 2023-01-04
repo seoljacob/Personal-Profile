@@ -48,23 +48,9 @@ function useScrollDirection() {
 };
 
 function Main() {
-    const [style, setStyle] = useState({});
     const [activeButton, setActiveButton] = useState('button1');
     const scrollDirection = useScrollDirection();
     const checkboxRef = useRef(null);
-
-    useEffect(() => {
-        setTimeout(() => {
-            setStyle({
-                backgroundImage: "url('/self-portrait.jpeg')",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-                borderBottom: "20px solid",
-                borderImage: "linear-gradient(to right, transparent, rgba(0, 0, 0, 0.5), transparent) 1",
-            })
-        }, 2000);
-    }, [])
 
     const handleClick = (button) => {
         setActiveButton(button);
@@ -111,7 +97,7 @@ function Main() {
 
     return (
         <>
-            <div className='content' style={style}>
+            <div className='content'>
                 <div className={`${scrollDirection === "down" ? "hide" : "show1"} content-header`}>
                     <a className='content-header-logo' onClick={scrollToTop} >JS</a>
                     <div className='content-header-links'>
