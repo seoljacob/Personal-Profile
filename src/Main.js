@@ -270,7 +270,7 @@ function Main() {
                                 Plan A
                             </div>
                             <div className='work-square-description'>
-                                An android application designed to plan your next road trip. Built with EV vehicle range indicators, charging station locations, routing, searching, and more
+                                An android application designed to plan your next road trip. Built with EV vehicle range indication, charging station locations, routing, searching, and more
                             </div>
                             <div className='work-square-technologies'>
                                 <div>
