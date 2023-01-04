@@ -51,6 +51,7 @@ function Main() {
     const [style, setStyle] = useState({});
     const [activeButton, setActiveButton] = useState('button1');
     const scrollDirection = useScrollDirection();
+    const checkboxRef = useRef(null);
 
     useEffect(() => {
         setTimeout(() => {
@@ -104,7 +105,10 @@ function Main() {
         window.location.href = mailtoLink;
     };
 
-    
+    function handleClickMenu() {
+        checkboxRef.current.checked = !checkboxRef.current.checked;
+    }
+
     return (
         <>
             <div className='content' style={style}>
@@ -115,6 +119,33 @@ function Main() {
                             links.map((link, ind) => <a className='links' onClick={() => scrollToSection(link.link)} key={ind}>{link.name}</a>)
                         }
                     </div>
+                    <div className='content-header-menu'>
+                        <input id="page-nav-toggle" class="main-navigation-toggle" type="checkbox" ref={checkboxRef}/>
+                        <label for="page-nav-toggle">
+                            <svg class="icon--menu-toggle" viewBox="0 0 60 30">
+                                <g class="icon-group">
+                                    <g class="icon--menu">
+                                        <path d="M 6 0 L 54 0" />
+                                        <path d="M 6 15 L 54 15" />
+                                        <path d="M 6 30 L 54 30" />
+                                    </g>
+                                    <g class="icon--close">
+                                        <path d="M 15 0 L 45 30" />
+                                        <path d="M 15 30 L 45 0" />
+                                    </g>
+                                </g>
+                            </svg>
+                        </label>
+
+                        <nav class="main-navigation">
+                            <ul>
+                                {
+                                    links.map((link, ind) => <li><a className='links' href={`#${link.link}`} onClick={handleClickMenu} key={ind}>{link.name}</a></li>)
+                                }
+                            </ul>
+                        </nav>
+                    </div>
+
                 </div>
                 <main className='content-main'>
                     <TypeAnimation
@@ -175,10 +206,6 @@ function Main() {
                     <div className='content-main-subtitle-mobile'>
                         I am a Software Engineer based in Vancouver, BC.
                     </div>
-                    {/* <div className='content-main-description'>
-                        I'm a computer science student graduating in May 2023.
-                        Currently, I'm seeking new grad or intern opportunities for summer 2023.
-                    </div> */}
                     <a className='content-main-connect' href="https://docs.google.com/document/d/15Gjwp768dQm5dqFT75kamAlyVy6TslMtS0q_EmjLL0w/edit?usp=sharing" target="_blank">
                         Resume
                     </a>
@@ -424,7 +451,7 @@ function Main() {
                                         <div className='experience-description-title'>Innovibe</div>
                                         <div className='experience-description-role'>Software Developer Co-op</div>
                                         <div className='experience-description-date'>January 2022 - August 2022 | 8 months</div>
-                                        <ul>
+                                        <ul className='experience-points'>
                                             <li>Built and maintained web applications using React.js and TypeScript</li>
                                             <li>Improved team productivity and collaboration by implementing Agile development methodologies, including daily stand-ups, sprint planning, and retrospectives
                                             </li>
