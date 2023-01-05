@@ -134,6 +134,7 @@ function Main() {
 
                 </div>
                 <main className='content-main'>
+                    {/* <img className='content-main-pic' src="pixel-art.png" /> */}
                     <TypeAnimation
                         className='content-main-intro'
                         sequence={[1000, 'Hi, my name is']} />
