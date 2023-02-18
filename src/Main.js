@@ -166,7 +166,7 @@ function Main() {
           {/* <img className='content-main-pic' src="pixel-art.png" /> */}
           <TypeAnimation
             className="content-main-intro"
-            sequence={[500, "Hi, my name is"]}
+            sequence={[1000, "Hi, my name is"]}
           />
           <div className="content-main-title">
             <span>
