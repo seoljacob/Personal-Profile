@@ -166,7 +166,7 @@ function Main() {
           {/* <img className='content-main-pic' src="pixel-art.png" /> */}
           <TypeAnimation
             className="content-main-intro"
-            sequence={[1000, "Hi, my name is"]}
+            sequence={[500, "Hi, my name is"]}
           />
           <div className="content-main-title">
             <span>
@@ -502,26 +502,25 @@ function Main() {
                   </div>
                   <ul className="experience-points">
                     <li>
-                      Built and maintained web applications using React.js and
+                      Developed a scalable web application using React and
                       TypeScript
                     </li>
                     <li>
-                      Improved team productivity and collaboration by
-                      implementing Agile development methodologies, including
-                      daily stand-ups, sprint planning, and retrospectives
+                      Implemented server-side rendering with Next.js, resulting
+                      in a 20% reduction in page load time for the web
+                      application
                     </li>
                     <li>
-                      Utilised RESTful APIs and SQL to build and maintain
-                      efficient, robust, and scalable data-driven systems
+                      Achieved a 16% increase in application uptime by
+                      optimizing data storage and retrieval through the
+                      development of a Node/Express, MySQL, and NoSQL backend
+                      system. MySQL was used for structured data storage and
+                      NoSQL for faster read operations
                     </li>
                     <li>
-                      Deployed server-side rendered web applications using
-                      Next.js, resulting in improved performance and SEO
-                    </li>
-                    <li>
-                      Contributed to the development of enterprise-level
-                      applications, demonstrating strong problem-solving and
-                      team collaboration skills
+                      Collaborated with a cross-functional team in an Agile
+                      environment to build an enterprise-level application that
+                      was delivered on time and within budget
                     </li>
                   </ul>
                 </div>
