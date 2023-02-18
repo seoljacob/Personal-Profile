@@ -8,7 +8,7 @@ function Loading() {
     useEffect(() => {
         const timeout = setTimeout(() => {
             setShowLoading(false);
-        }, 4500);
+        }, 2500);
 
         return () => clearTimeout(timeout);
     }, []);
@@ -18,15 +18,17 @@ function Loading() {
             {
                 showLoading ? (
                     <div className='loading'>
+                        {/* Outro */}
                         <motion.svg width="100" height="100"
                             initial={{ opacity: 1, scale: 1 }}
                             animate={{ opacity: 0, scale: 0 }}
                             transition={{
-                                delay: 4,
+                                delay: 2,
                                 duration: 0.5,
                                 ease: 'easeInOut'
                             }}
                         >
+                            {/* Circle */}
                             <motion.path
                                 d="M50,50 m-45,0 a45,45 0 1,0 90,0 a45,45 0 1,0 -90,0"
                                 stroke="#64ffda"
@@ -48,10 +50,11 @@ function Loading() {
                                     },
                                 }}
                                 transition={{
-                                    duration: 2,
+                                    duration: 1,
                                     ease: "easeInOut",
                                 }}
                             />
+                            {/* Name */}
                             <motion.text
                                 x="50"
                                 y="56"
@@ -72,7 +75,7 @@ function Loading() {
                                     },
                                 }}
                                 transition={{
-                                    delay: 2,
+                                    delay: 1,
                                     duration: 1,
                                     ease: "easeInOut",
                                 }}
