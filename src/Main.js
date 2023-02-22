@@ -511,11 +511,10 @@ function Main() {
                       application
                     </li>
                     <li>
-                      Achieved a 16% increase in application uptime by
+                      Achieved a 6% increase in application uptime by
                       optimizing data storage and retrieval through the
                       development of a Node/Express, MySQL, and NoSQL backend
-                      system. MySQL was used for structured data storage and
-                      NoSQL for faster read operations
+                      system
                     </li>
                     <li>
                       Collaborated with a cross-functional team in an Agile
