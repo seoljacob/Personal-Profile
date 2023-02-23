@@ -517,7 +517,7 @@ function Main() {
                     </li>
                     <li>
                       Created an admin panel for managing user access to the web
-                      application with the ability to search, block, and unblock
+                      application, with the ability to search, block, and unblock
                       users based on their username, email, or IP address
                     </li>
                     <li>
