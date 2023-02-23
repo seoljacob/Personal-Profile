@@ -266,7 +266,7 @@ function Main() {
               <div className="work-square-description">
                 A stock trading bot that leverages predictive analytics on
                 50,000+ data points to automate profitable trades, achieving 70%
-                portfolio growth in just six months.
+                portfolio growth over six months.
               </div>
               <div className="work-square-technologies">
                 <div>Python</div>
@@ -511,9 +511,14 @@ function Main() {
                       the web application
                     </li>
                     <li>
-                      Achieved a 6% increase in overall system throughput by
-                      developing a Node/Express server that utilized both MySQL
-                      and NoSQL to optimize the storage and retrieval of data
+                      Improved overall system throughput by 6% by developing a
+                      Node/Express server that utilizes both MySQL and NoSQL to
+                      optimize the storage and retrieval of data
+                    </li>
+                    <li>
+                      Created an admin panel for managing user access to the web
+                      application with the ability to search, block, and unblock
+                      users based on their username, email, or IP address
                     </li>
                     <li>
                       Collaborated with a cross-functional team in an Agile
