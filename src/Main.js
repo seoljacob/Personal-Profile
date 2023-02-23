@@ -502,19 +502,18 @@ function Main() {
                   </div>
                   <ul className="experience-points">
                     <li>
-                      Developed a scalable web application using React and
-                      TypeScript
+                      Developed a marketplace for the sale and exchange of
+                      digital assets using React and TypeScript
                     </li>
                     <li>
-                      Implemented server-side rendering with Next.js, resulting
-                      in a 20% reduction in page load time for the web
-                      application
+                      Implemented server-side rendering with Next.js to prefetch
+                      data, resulting in a 20% reduction in page load time for
+                      the web application
                     </li>
                     <li>
                       Achieved a 6% increase in overall system throughput by
-                      optimizing data storage and retrieval through the
-                      development of a Node/Express, MySQL, and NoSQL backend
-                      system
+                      developing a Node/Express server that utilized both MySQL
+                      and NoSQL to optimize the storage and retrieval of data
                     </li>
                     <li>
                       Collaborated with a cross-functional team in an Agile
