@@ -103,9 +103,8 @@ function Main() {
     <>
       <div className="content">
         <div
-          className={`${
-            scrollDirection === "down" ? "hide" : "show1"
-          } content-header`}
+          className={`${scrollDirection === "down" ? "hide" : "show1"
+            } content-header`}
         >
           <a className="content-header-logo" onClick={scrollToTop}>
             JS
@@ -264,9 +263,7 @@ function Main() {
                 Algorithmic Stock Trading Bot
               </div>
               <div className="work-square-description">
-                A stock trading bot that leverages predictive analytics on
-                50,000+ data points to automate profitable trades, achieving 70%
-                portfolio growth over six months.
+                A stock trading bot that uses the moving average crossover to identify trends in the market and make trades.
               </div>
               <div className="work-square-technologies">
                 <div>Python</div>
@@ -286,9 +283,7 @@ function Main() {
               </div>
               <div className="work-square-title">Chess Engine</div>
               <div className="work-square-description">
-                A Python-based Chess Engine with optimized move generation
-                through alpha-beta pruning, achieving analysis speeds of over
-                200,000 positions per second.
+                A Python-based Chess Engine that autonomously analyzes game states and predicts optimal moves.
               </div>
               <div className="work-square-technologies">
                 <div>Python</div>
@@ -308,7 +303,7 @@ function Main() {
               <div className="work-square-description">
                 An android application designed to plan your next road trip.
                 Built with EV vehicle range indication, charging station
-                locations, routing, searching, and more
+                locations, routing, searching, and more.
               </div>
               <div className="work-square-technologies">
                 <div>Java</div>
@@ -328,7 +323,7 @@ function Main() {
               <div className="work-square-title">Flashcards</div>
               <div className="work-square-description">
                 A web application that identifies knowledge gaps and reinforces
-                these areas for a more wholistic study session
+                these areas for a more wholistic study session.
               </div>
               <div className="work-square-technologies">
                 <div>React.js</div>
@@ -347,9 +342,9 @@ function Main() {
               <div className="work-square-header">
                 <PixelCode />
               </div>
-              <div className="work-square-title">Stock Scraper</div>
+              <div className="work-square-title">Web Scraper</div>
               <div className="work-square-description">
-                A web scraper that retrieves mark up from both dynamically
+                A web scraper that retrieves and parses mark up from dynamically
                 generated and static websites.
               </div>
               <div className="work-square-technologies">
@@ -360,7 +355,7 @@ function Main() {
               </div>
             </a>
 
-            <a
+            {/* <a
               className="work-square hidden"
               href="https://github.com/seoljacob/Machine-Learning-Idea-Generator-Frontend"
               target="_blank"
@@ -371,14 +366,14 @@ function Main() {
               <div className="work-square-title">ML Idea Generator</div>
               <div className="work-square-description">
                 A web application that suggest business ideas given keywords or
-                phrases
+                phrases.
               </div>
               <div className="work-square-technologies">
                 <div>React</div>
                 <div>Flask</div>
                 <div>OpenAI</div>
               </div>
-            </a>
+            </a> */}
           </div>
         </div>
 
@@ -475,17 +470,15 @@ function Main() {
             <div className="experience-buttons">
               <button
                 onClick={() => handleClick("button1")}
-                className={`${
-                  activeButton === "button1" ? "experience-button-active" : ""
-                } experience-button`}
+                className={`${activeButton === "button1" ? "experience-button-active" : ""
+                  } experience-button`}
               >
                 Innovibe
               </button>
               <button
                 onClick={() => handleClick("button2")}
-                className={`${
-                  activeButton === "button2" ? "experience-button-active" : ""
-                } experience-button`}
+                className={`${activeButton === "button2" ? "experience-button-active" : ""
+                  } experience-button`}
               >
                 Coming Soon
               </button>
@@ -506,24 +499,19 @@ function Main() {
                       digital assets using React and TypeScript
                     </li>
                     <li>
-                      Implemented server-side rendering with Next.js to prefetch
-                      data, resulting in a 20% reduction in page load time for
-                      the web application
+                      Implemented server-side rendering to prefetch data with Next, resulting in a 20% reduction in
+                      page load time
                     </li>
                     <li>
-                      Improved overall system throughput by 6% by developing a
-                      Node/Express server that utilizes both MySQL and NoSQL to
-                      optimize the storage and retrieval of data
+                      Improved system throughput by 6% by developing a Node/Express server that uses MySQL and
+                      Firebase to optimize the storage and retrieval of data
                     </li>
                     <li>
-                      Created an admin panel for managing user access to the web
-                      application, with the ability to search, block, and unblock
-                      users based on their username, email, or IP address
+                      Created an admin panel for managing user access to the web application
                     </li>
                     <li>
-                      Collaborated with a cross-functional team in an Agile
-                      environment to build an enterprise-level application that
-                      was delivered on time and within budget
+                      Collaborated with a cross-functional team in an Agile environment to build an enterprise-level
+                      application on time and within budget
                     </li>
                   </ul>
                 </div>
