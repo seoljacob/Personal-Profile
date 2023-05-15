@@ -253,131 +253,26 @@ function Main() {
           <div className="work-main hidden">
             <a
               className="work-square hidden"
-              href="https://github.com/seoljacob/Algorithmic-Stock-Trading-Bot"
+              href="https://github.com/seoljacob/GoodStudentBadStudent/tree/master"
               target="_blank"
             >
               <div className="work-square-header">
                 <PixelCode />
               </div>
               <div className="work-square-title">
-                Algorithmic Stock Trading Bot
+                Good Student Bad Student
               </div>
               <div className="work-square-description">
-                A stock trading bot that uses the moving average crossover to identify trends in the market and make trades.
+                Regression model based on the <i>"Higher Education Students Performance Evaluation"</i> data set to predict a student's GPA based on 33 different factors.
               </div>
               <div className="work-square-technologies">
                 <div>Python</div>
-                <div>NumPy</div>
-                <div>pandas</div>
-                <div>Matplotlib</div>
               </div>
             </a>
-
-            <a
-              className="work-square hidden"
-              href="https://github.com/seoljacob/Chess-Engine"
-              target="_blank"
-            >
-              <div className="work-square-header">
-                <PixelCode />
-              </div>
-              <div className="work-square-title">Chess Engine</div>
-              <div className="work-square-description">
-                A Python-based Chess Engine that autonomously analyzes game states and predicts optimal moves.
-              </div>
-              <div className="work-square-technologies">
-                <div>Python</div>
-                <div>PyQt</div>
-              </div>
-            </a>
-
-            <a
-              className="work-square hidden"
-              href="https://github.com/seoljacob/PlanA"
-              target="_blank"
-            >
-              <div className="work-square-header">
-                <PixelCode />
-              </div>
-              <div className="work-square-title">Plan A</div>
-              <div className="work-square-description">
-                An android application designed to plan your next road trip.
-                Built with EV vehicle range indication, charging station
-                locations, routing, searching, and more.
-              </div>
-              <div className="work-square-technologies">
-                <div>Java</div>
-                <div>Firebase</div>
-                <div>Google Maps</div>
-              </div>
-            </a>
-
-            <a
-              className="work-square hidden"
-              href="https://github.com/seoljacob/Flashcards"
-              target="_blank"
-            >
-              <div className="work-square-header">
-                <PixelCode />
-              </div>
-              <div className="work-square-title">Flashcards</div>
-              <div className="work-square-description">
-                A web application that identifies knowledge gaps and reinforces
-                these areas for a more wholistic study session.
-              </div>
-              <div className="work-square-technologies">
-                <div>React.js</div>
-                <div>TypeScript</div>
-                <div>Node/Express</div>
-                <div>MySQL</div>
-                <div>Firebase</div>
-              </div>
-            </a>
-
-            <a
-              className="work-square hidden"
-              href="https://github.com/seoljacob/Stock-Scraper"
-              target="_blank"
-            >
-              <div className="work-square-header">
-                <PixelCode />
-              </div>
-              <div className="work-square-title">Web Scraper</div>
-              <div className="work-square-description">
-                A web scraper that retrieves and parses mark up from dynamically
-                generated and static websites.
-              </div>
-              <div className="work-square-technologies">
-                <div>Python</div>
-                <div>Selenium</div>
-                <div>Beautiful Soup</div>
-                <div>pandas</div>
-              </div>
-            </a>
-
-            {/* <a
-              className="work-square hidden"
-              href="https://github.com/seoljacob/Machine-Learning-Idea-Generator-Frontend"
-              target="_blank"
-            >
-              <div className="work-square-header">
-                <PixelCode />
-              </div>
-              <div className="work-square-title">ML Idea Generator</div>
-              <div className="work-square-description">
-                A web application that suggest business ideas given keywords or
-                phrases.
-              </div>
-              <div className="work-square-technologies">
-                <div>React</div>
-                <div>Flask</div>
-                <div>OpenAI</div>
-              </div>
-            </a> */}
           </div>
         </div>
 
-        <div className="about" id="about">
+        {/* <div className="about" id="about">
           <div className="about-header hidden">
             <div>About Me</div>
             <div className="border-right"></div>
@@ -386,13 +281,7 @@ function Main() {
           <div className="about-main hidden">
             <div className="about-description">
               <p>
-                Since a young age, I found myself drawn to the world of
-                technology and its endless possibilities. I now design and
-                develop exceptional digital experiences that have real and
-                tangible effects on our world. I've had the privilege of working
-                at a start-up and I'm excited to continue to learn, grow, and
-                leverage my diverse background to make meaningful contributions
-                at my next org.
+                Description Here.
               </p>
               <p>Here are some of the technologies I've been working with:</p>
               <div className="tech-stack hidden">
@@ -459,7 +348,7 @@ function Main() {
               </a>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div className="experience" id="experience">
           <div className="experience-header hidden">
