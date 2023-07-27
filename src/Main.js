@@ -19,7 +19,7 @@ import GithubIcon from "./github-icon";
 
 const links = [
   { name: "Work", link: "work" },
-  { name: "About", link: "about" },
+  // { name: "About", link: "about" },
   { name: "Experience", link: "experience" },
   { name: "Contact", link: "contact" },
 ];
